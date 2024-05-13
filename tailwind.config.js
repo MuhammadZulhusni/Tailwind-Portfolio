@@ -6,6 +6,7 @@
 
 module.exports = {
   content: ["index.html"], // Specifies which files Tailwind should scan for classes
+  darkMode: "class",
   theme: {
     container: {
       center: true, // Centers the content horizontally within the container
