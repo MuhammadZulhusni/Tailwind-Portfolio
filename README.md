@@ -19,7 +19,7 @@ It is built entirely with Tailwind CSS, a utility-first CSS framework, to achiev
 1. Clone the repository:
 
     ```
-    git clone https://github.com/zulhusni2003/Tailwind-Portfolio.git
+    git clone https://github.com/MuhammadZulhusni/Tailwind-Portfolio.git
     ```
 
 2. Open the `index.html` file in your browser to view the portfolio.
