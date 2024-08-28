@@ -5,11 +5,17 @@ window.onscroll = function () {
   const toTop = document.querySelector("#to-top");
 
   if (window.pageYOffset > fixedNav) {
+    // If the page is scrolled past the header, make the navbar fixed
     header.classList.add("navbar-fixed");
+
+    // Show the "to-top" button when the navbar is fixed
     toTop.classList.remove("hidden");
     toTop.classList.add("flex");
   } else {
+    // Remove the fixed navbar styling when scrolled to the top
     header.classList.remove("navbar-fixed");
+
+    // Hide the "to-top" button when at the top of the page
     toTop.classList.remove("flex");
     toTop.classList.add("hidden");
   }
