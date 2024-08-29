@@ -21,19 +21,25 @@ window.onscroll = function () {
   }
 };
 
-// hamburger
+// Select hamburger icon and navigation menu elements
 const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#nav-menu");
 
 hamburger.addEventListener("click", function () {
+  // Toggle the 'hamburger-active' class to animate the icon
   hamburger.classList.toggle("hamburger-active");
+
+  // Toggle the 'hidden' class to show or hide the navigation menu
   navMenu.classList.toggle("hidden");
 });
 
-// Click outside the area of hamburger
+// Close the navigation menu when clicking outside the hamburger or menu
 window.addEventListener("click", function (e) {
   if (e.target != hamburger && e.target != navMenu) {
+    // Remove the 'hamburger-active' class to reset the icon
     hamburger.classList.remove("hamburger-active");
+
+    // Add the 'hidden' class to hide the navigation menu
     navMenu.classList.add("hidden");
   }
 });
