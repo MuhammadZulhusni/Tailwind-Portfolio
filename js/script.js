@@ -46,22 +46,41 @@ window.addEventListener("click", function (e) {
 
 // Dark mode toggle
 const darkToggle = document.querySelector("#dark-toggle");
+// Selects the dark mode toggle checkbox element.
 const html = document.querySelector("html");
+// Selects the <html> element to apply or remove the "dark" class.
 
 darkToggle.addEventListener("click", function () {
   if (darkToggle.checked) {
+    // If the toggle is checked (dark mode is activated):
+
     html.classList.add("dark");
+    // Add the "dark" class to the <html> element to activate dark mode.
+
     localStorage.theme = "dark";
+    // Save the user's dark mode preference in local storage.
   } else {
+    // If the toggle is unchecked (light mode is activated):
+
     html.classList.remove("dark");
+    // Remove the "dark" class from the <html> element to deactivate dark mode.
+
     localStorage.theme = "light";
+    // Save the user's light mode preference in local storage.
   }
 });
-
-// Toggle mode
+// Set the initial theme based on user preference or system settings
 if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+  // If the user preference is set to dark in local storage, or if there is no saved preference and the system preference is dark:
+
   document.documentElement.classList.add("dark");
+  // Add the "dark" class to the <html> element to activate dark mode by default.
+
   darkToggle.checked = true;
+  // Set the toggle checkbox to checked state.
 } else {
+  // If the user preference is set to light or the system preference is light:
+
   darkToggle.checked = false;
+  // Ensure the toggle checkbox is in the unchecked state.
 }
